@@ -21,6 +21,7 @@
   "homepage": "https://github.com/hyperchessbot/netlifylambdaoauth#readme",
   "dependencies": {
     "netlify-lambda": "^2.0.2",
+    "node-fetch": "^1.7.3",
     "simple-oauth2": "^2.2.0"
   }
 }

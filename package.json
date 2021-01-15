@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/hyperchessbot/netlifylambdaoauth#readme",
   "dependencies": {
-    "netlify-lambda": "^2.0.2"
+    "netlify-lambda": "^2.0.2",
+    "simple-oauth2": "^2.2.0"
   }
 }

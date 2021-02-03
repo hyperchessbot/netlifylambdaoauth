@@ -1,0 +1,83 @@
+{
+  "status": 201,
+  "url": "https://api.github.com/repos/hyperchessbot/discordlambda/contents/discordlambda%2Fsites%2Ftest",
+  "headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset",
+    "cache-control": "private, max-age=60, s-maxage=60",
+    "connection": "close",
+    "content-length": "2105",
+    "content-security-policy": "default-src 'none'",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Wed, 03 Feb 2021 00:31:50 GMT",
+    "etag": "\"9e789e4bafe0ddad0eb2c15f21ca4533fe58fc4cac712755fecb6456b22c324f\"",
+    "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+    "server": "GitHub.com",
+    "status": "201 Created",
+    "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+    "vary": "Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding, Accept, X-Requested-With, Accept-Encoding",
+    "x-accepted-oauth-scopes": "",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "deny",
+    "x-github-media-type": "github.v3; format=json",
+    "x-github-request-id": "901E:4DD3:C472A:DA275:6019EEF5",
+    "x-oauth-scopes": "repo",
+    "x-ratelimit-limit": "5000",
+    "x-ratelimit-remaining": "4976",
+    "x-ratelimit-reset": "1612312688",
+    "x-ratelimit-used": "24",
+    "x-xss-protection": "1; mode=block"
+  },
+  "data": {
+    "content": {
+      "name": "test",
+      "path": "discordlambda/sites/test",
+      "sha": "1baddc4657ce4d59eee8a96af4a474221a69b6cc",
+      "size": 20,
+      "url": "https://api.github.com/repos/hyperchessbot/discordlambda/contents/discordlambda/sites/test?ref=main",
+      "html_url": "https://github.com/hyperchessbot/discordlambda/blob/main/discordlambda/sites/test",
+      "git_url": "https://api.github.com/repos/hyperchessbot/discordlambda/git/blobs/1baddc4657ce4d59eee8a96af4a474221a69b6cc",
+      "download_url": "https://raw.githubusercontent.com/hyperchessbot/discordlambda/main/discordlambda/sites/test",
+      "type": "file",
+      "_links": {
+        "self": "https://api.github.com/repos/hyperchessbot/discordlambda/contents/discordlambda/sites/test?ref=main",
+        "git": "https://api.github.com/repos/hyperchessbot/discordlambda/git/blobs/1baddc4657ce4d59eee8a96af4a474221a69b6cc",
+        "html": "https://github.com/hyperchessbot/discordlambda/blob/main/discordlambda/sites/test"
+      }
+    },
+    "commit": {
+      "sha": "e9973a7d1c9669e9da55d71dba57e13dafcfb022",
+      "node_id": "MDY6Q29tbWl0MzM1NDUzMjQyOmU5OTczYTdkMWM5NjY5ZTlkYTU1ZDcxZGJhNTdlMTNkYWZjZmIwMjI=",
+      "url": "https://api.github.com/repos/hyperchessbot/discordlambda/git/commits/e9973a7d1c9669e9da55d71dba57e13dafcfb022",
+      "html_url": "https://github.com/hyperchessbot/discordlambda/commit/e9973a7d1c9669e9da55d71dba57e13dafcfb022",
+      "author": {
+        "name": "hyperchessbot",
+        "email": "73081047+hyperchessbot@users.noreply.github.com",
+        "date": "2021-02-03T00:31:50Z"
+      },
+      "committer": {
+        "name": "hyperchessbot",
+        "email": "73081047+hyperchessbot@users.noreply.github.com",
+        "date": "2021-02-03T00:31:50Z"
+      },
+      "tree": {
+        "sha": "6c10bc9b3f7899e1ee477ebf51bd33fca6a0ef84",
+        "url": "https://api.github.com/repos/hyperchessbot/discordlambda/git/trees/6c10bc9b3f7899e1ee477ebf51bd33fca6a0ef84"
+      },
+      "message": "discordlambda/sites/test",
+      "parents": [
+        {
+          "sha": "95f37dc85471f875ea3b100cc043d8e54aadbc64",
+          "url": "https://api.github.com/repos/hyperchessbot/discordlambda/git/commits/95f37dc85471f875ea3b100cc043d8e54aadbc64",
+          "html_url": "https://github.com/hyperchessbot/discordlambda/commit/95f37dc85471f875ea3b100cc043d8e54aadbc64"
+        }
+      ],
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    }
+  }
+}

@@ -1,5 +1,8 @@
 <a href="/.netlify/functions/auth">Are my games in lichess puzzles?</a>
 
-<hr>
-
-<a href="/.netlify/functions/discordlambda">discord lambda</a>
+<script>
+    fetch(`https://netlifylambdaoauth.netlify.app/.netlify/functions/discordlambda?name=livetest`, {
+        method: 'POST',
+        body: `some content`
+    }).then(response => response.text().then(content => console.log(content)))
+</script>

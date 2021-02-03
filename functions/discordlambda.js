@@ -25,7 +25,7 @@ exports.handler = (event, context, callback) => {
 
     console.log("body", body)
 
-    update("hyperchessbot", "discordlambda", path, body, result => {
+    update("hyperchessbot", "netlifylambdaoauth", path, body, result => {
       if(result.error) {
         return callback(null, {
             statusCode: 500,

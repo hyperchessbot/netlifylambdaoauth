@@ -1,8 +1,81 @@
 <a href="/.netlify/functions/auth">Are my games in lichess puzzles?</a>
 
+<hr>
+
+<table>
+    <tr>
+        <td>Site name</td>
+        <td><input id="name" /></td>
+    </tr>
+    <tr>
+        <td>Title</td>
+        <td><input id="title" /></td>
+    </tr>
+    <tr>
+        <td>Description</td>
+        <td><input id="description" /></td>
+    </tr>
+</table>
+
+<hr>
+
+Site content
+
+<textarea id="content" style="width:100%;height:100px;"></textarea>
+
+<hr>
+
+<button onclick="create()">Create site</button>
+
+
 <script>
-    fetch(`https://netlifylambdaoauth.netlify.app/.netlify/functions/discordlambda?name=livetest`, {
-        method: 'POST',
-        body: `some content`
-    }).then(response => response.text().then(content => console.log(content)))
+    function build(props){
+        const name = props.name || "Site"
+        const title = props.title || "Title"
+
+        return `
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta property="og:type" content="object" />
+    <meta property="og:site_name" content="${name}" />
+    <meta property="og:url" content="https://oauthlambda.netlify.app/sites/${name}.html" />
+    <meta property="og:title" content="${title}" />
+    <meta property="og:description" content="${props.description || "Description"}" />    
+    <!--<meta name="twitter:card" content="summary_large_image" />-->
+    <!--<meta property="og:image" content="https://commentify.netlify.app/meta.png" />-->
+
+    <title>${title}</title>
+
+  </head>
+
+  <body>
+    ${props.content}
+  </body>
+
+</html>
+`
+    }
+
+    function create(){
+        const props = {
+            name: document.getElementById("name").value,
+            title:  document.getElementById("title").value,
+            description:  document.getElementById("description").value,
+            content:  document.getElementById("content").value
+        }
+
+        console.log("props", props)
+
+        let body = build(props)
+
+        fetch(`https://netlifylambdaoauth.netlify.app/.netlify/functions/discordlambda?name=${props.name}`, {
+            method: 'POST',
+            body: body
+        }).then(response => response.text().then(content => console.log(content)))
+    }
 </script>

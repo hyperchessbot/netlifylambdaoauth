@@ -27,6 +27,10 @@ Site content
 
 <button onclick="create()">Create site</button>
 
+<hr>
+
+<div id="message" style="font-size: 20px;"></div>
+
 
 <script>
     function build(props){
@@ -78,6 +82,10 @@ Site content
             body: body
         }).then(response => response.text().then(content => console.log(content)))
 
-        document.location.href = `https://netlifylambdaoauth.netlify.app/discordlambda/sites/${props.name}.html`
+        document.getElementById("message").innerHTML = `Creating site, please wait!`
+
+        setTimeout(_ => {
+            document.location.href = `https://netlifylambdaoauth.netlify.app/discordlambda/sites/${props.name}.html`
+        }, 60000)
     }
 </script>

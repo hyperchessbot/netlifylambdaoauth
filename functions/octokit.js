@@ -3,8 +3,6 @@ const Octokit = require("@octokit/rest")
 const DEFAULT_OWNER     = "hyperchessbot"
 const DEFAULT_REPO      = "discordlambda"
 
-const fs = require('fs')
-
 const octokit = Octokit({
     auth: process.env.HYPER_GITHUB_TOKEN,
     userAgent: "Hyper Chess"
@@ -34,16 +32,14 @@ function putfile(ownerOpt, repoOpt, path, content, sha, callback){
 
     octokit.repos.createOrUpdateFile(req).then(
         res => {
-            console.log("ok writing", owner, repo, path)
-            fs.writeFileSync("temp.txt", JSON.stringify(res, null, 2))
+            console.log("ok writing", owner, repo, path)            
             callback({
                 error: false,
                 status: `Written ${path} .`
             })
         },
         err => {
-            console.log("failed writing", owner, repo, path)
-            fs.writeFileSync("temp.txt", JSON.stringify(err, null, 2))
+            console.log("failed writing", owner, repo, path)            
             callback({
                 error: true,
                 status: `Failed writing ${path} .`

@@ -43,7 +43,7 @@ Site content
 
     <meta property="og:type" content="object" />
     <meta property="og:site_name" content="${name}" />
-    <meta property="og:url" content="https://oauthlambda.netlify.app/discordlambda/sites/${name}.html" />
+    <meta property="og:url" content="https://netlifylambdaoauth.netlify.app/discordlambda/sites/${name}.html" />
     <meta property="og:title" content="${title}" />
     <meta property="og:description" content="${props.description || "Description"}" />    
     <!--<meta name="twitter:card" content="summary_large_image" />-->
@@ -78,6 +78,6 @@ Site content
             body: body
         }).then(response => response.text().then(content => console.log(content)))
 
-        document.location.href = `https://oauthlambda.netlify.app/discordlambda/sites/${props.name}.html`
+        document.location.href = `https://netlifylambdaoauth.netlify.app/discordlambda/sites/${props.name}.html`
     }
 </script>
